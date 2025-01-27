@@ -8,7 +8,8 @@
 - Docker
 ---
 ## Required .env
-You will need to create a .env at web-server\api\src\.env inside it will need to variables
+You will need to create a .env at web-server\api\src\.env 
+inside it will need two variables
 - TABLE_NAME="insert dynamo-db table name here"
 - AWS_REGION="us-east-1"
 ---
