@@ -1,0 +1,40 @@
+/* Reset default margin and padding for all elements */
+
+body {
+    margin: 0px;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    background-color: #426135;
+    padding: 5px 15px;
+    border-bottom: 5px solid yellowgreen;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    align-items: center;
+  }
+  
+.logo {
+    height: 45px;
+    border-radius: 50%;
+    padding-left: 3px;
+    padding-bottom: 2px;
+  }
+
+  .logo-background{
+    background-color: white;
+    border-radius: 50%;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    color: white;
+    padding: 5px;
+  }

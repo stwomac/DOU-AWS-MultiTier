@@ -1,0 +1,8 @@
+docker-tests.pem
+*.pem
+*.env
+*/terraform.tfstate
+*/terraform.tfstate.backup
+*.terraform
+*/.terraform.lock.hcl
+*.pem

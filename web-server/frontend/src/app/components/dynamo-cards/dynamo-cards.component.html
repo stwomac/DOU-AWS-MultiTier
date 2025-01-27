@@ -1,0 +1,52 @@
+
+
+<!-- <button class="btn btn-primary" (click)="loadAllItems()">Load Data</button> -->
+
+<div class="card-body">
+  
+  <h2>Past Projects</h2>
+
+  <div *ngIf="items?.data as brands" class="card-wrapper">
+    <div *ngFor="let brand of brands; let i = index"  style="cursor: pointer;">
+      <!-- Entire card clickable" -->
+      <div class="card" (click)="loadItem(i)">
+        <!-- Displays hash key's value as Title -->
+        <h3 class="card-title">{{ brand.Brand }}</h3>
+        <!-- Expandable content -->
+         @if (expandedItem.has(i)) {
+          <div *ngIf="expandedItem.has(i)" class="mt-2">
+            
+            <!-- displays services provided as tags, with additional functionality would make tags a searchable field -->
+            <div *ngIf="brand.ServicesProvided">
+                <div class="tags">
+                  <span 
+                    *ngFor="let tag of brand.ServicesProvided.split(',')" 
+                    class="badge badge-pill badge-secondary mr-1"
+                  >
+                    {{ tag.trim() }}
+                  </span>
+                </div>
+            </div>
+            <!-- dynamically shows all fields but ServicesProvided and Brand using keyvalue pipe  -->
+            <div *ngFor="let kv of brand | keyvalue">
+                  
+                  <ng-container *ngIf="kv.key !== 'Brand' && kv.key !== 'ServicesProvided'">
+                    {{ kv.value }}
+                  </ng-container>
+            </div>
+             
+            </div>
+         } @else {
+          <!-- if a card is not expanded show the logo in the space it would use -->
+          <div class="back-logo">
+            <img src="/logo.png" alt="Pangolin Logo" class="logo">
+          </div>
+         }
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+FROM node:22.4.0-alpine
+WORKDIR /usr/src/app
+COPY ["package.json", "package-lock.json*", "angular.json*", "./"]
+COPY . .
+#installing after copying because of some of our dependencies
+RUN echo "npm install"
+RUN npm install 
+RUN echo "angular install"
+RUN npm install -g @angular/cli
+#server hosting install
+RUN npm install -g angular-http-server
+EXPOSE 4200
+RUN ng build
+CMD angular-http-server --path ./dist/frontend/browser -p 4200

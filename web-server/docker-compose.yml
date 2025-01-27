@@ -1,0 +1,20 @@
+services:
+  api:
+    image: womackst9/dou-api:latest
+    build:
+      context: ./api
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
+    env_file: /api/src/.env
+  frontend:
+    image: womackst9/dou-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: ./dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 4200:4200

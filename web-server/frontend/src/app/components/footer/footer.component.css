@@ -1,0 +1,13 @@
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color: #426135;
+    padding: 5px 15px;
+    align-items: center;
+    margin-top: auto;
+  }
+
+h2 {
+    color: white;
+}
+  
