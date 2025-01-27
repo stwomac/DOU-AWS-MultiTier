@@ -7,6 +7,11 @@
 - Terraform
 - Docker
 ---
+## Required .env
+You will need to create a .env at web-server\api\src\.env inside it will need to variables
+- TABLE_NAME="insert dynamo-db table name here"
+- AWS_REGION="us-east-1"
+---
 ## Setup
 ### Please Note:
 Due to specific environment and cost requirements, there is no static domain for the backend api, nor is there a golden ami allowed for the ec2 instances. As such when wanting to run this in your own environment you will want to do several things.
