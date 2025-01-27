@@ -28,3 +28,5 @@ Due to specific environment and cost requirements, there is no static domain for
 4. Run docker compose build in web-server\
 5. Run docker compose push in web-server\
 6. It will take around 12 minutes after 2 finishes for the user-data script to finish, afterwards you may go to your load balancer's url to access the website.
+---
+All development was done on a Windows Machine, as such some edits may be required to match your environment.
